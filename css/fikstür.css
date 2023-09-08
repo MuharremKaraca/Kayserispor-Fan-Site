@@ -1,0 +1,189 @@
+.agus{
+    border: 0;
+    background-color: #111;
+    color: #fff;
+}
+.nav-link{
+    color: red;
+}
+.nav.nav-tabs{
+    font-size: 17px;
+}
+
+.content{
+    margin-top: 30px;
+}
+.table{
+    text-align: center;
+}
+@media screen and (max-width:547px) {
+    .table .Lig{
+        font-size: 0px !important;
+    }
+    .table .takim1,.takim2{
+        font-size: 12px !important;
+    }
+    .table .tarih{
+        font-size: 11px;
+        opacity: 50%;
+    }
+}
+@media screen and (min-width:1406px) {
+.table .tarih {
+    font-size: 12px;
+   }
+   .table .Lig,.takim1,.takim2,.tre {
+    font-size: 18px;
+   }
+  }
+
+  @media screen and (min-width:1500px) {
+    .table .tarih {
+        font-size: 15px;
+       }
+   .table img{
+   height: 30px;
+   width: 30px;
+   }
+       .table .Lig,.takim1,.takim2,.tre {
+        font-size: 30px;
+       }
+  }
+@media screen and (min-width:700px) {
+    .toggler-icon .top-bar,
+    .bottom-bar,
+    .middle-bar {
+        padding-left: 29px !important;
+        margin-left: 9px !important;
+    }
+    .navbar-toggler{
+        height: 50px !important;
+        width: 50px !important;
+    }
+    .navbar-toggler .top-bar{
+        padding-left: 29px !important;
+        margin-left: 9px !important;
+    }
+
+}
+
+.bas{
+    padding-top: 20px;
+    font-size: 19px;
+    color: rgba(0,0,0,.8);
+    padding-bottom: 5px;
+    padding-left: 4px;
+    text-align: left;
+}
+
+.tarih{
+    font-size: 10px;
+    text-align: left;
+    padding: 0 4px;
+    opacity: 50%;
+    height: 32px;
+    vertical-align: middle;
+}
+.table
+.Lig{
+    height: 32px;
+    font-size: 15px;
+    vertical-align: middle;
+}
+.takim1{
+    text-align: right;
+    font-size: 18px;
+} 
+.table-striped>tbody>tr:nth-of-type(odd)>* {
+background-color: #151515;
+color: #222 ;
+}
+
+.takim2{
+    text-align: start;
+    font-size: 18px;
+}
+#tablocuk tbody tr
+{
+    color: #222;
+    font-size: 15px;
+    font-family: 'Poppins-regular';
+    font-weight: 100;
+}
+#tablocuk tbody tr:hover{
+    font-size: 15px;
+    color: #222;
+    font-family: 'Poppins-regular';
+    font-weight: 100;
+}
+
+.table tbody{
+    border-radius: 30px;
+}
+.tre{
+    text-align: center;
+    font-size:15px;
+}
+.content .container .nav .nav-item.dropdown{
+    background-color: #111;
+    border: 0;
+}
+.content .container .nav .nav-item.dropdown .dropdown-item{
+    background-color: #111;
+    border: 0;
+    color: #222;
+}
+.nav-tabs {
+    border: 0 !important;
+}
+.content .container .nav .nav-item.dropdown .dropdown-item:hover{
+    color: red;
+}
+.content .container .dropdown-menu{
+    background-color: #111;
+    border-radius: 30px;
+}
+.content .container .nav .nav-item.dropdown .nav-link.dropdown-toggle{
+    color: #fff;
+    border: 0;
+}
+.content .container .nav .nav-item.dropdown .nav-link.dropdown-toggle.takim.show{
+
+        color: red;
+        opacity: 100%;
+}
+.content .container .nav .nav-item .nav-link.active{
+    background-color: #111;
+    border: 0;
+opacity: 100%;
+}
+.content .container .nav .nav-item .nav-link:hover{
+    background-color: #111;
+    border: 0;
+opacity: 100%;
+transition: 0.5s;
+}
+.content .container .nav .nav-item .nav-link{
+    background-color: #111;
+    border: 0;
+opacity: 50%;
+transition: 0.5s;
+}
+table img
+{
+    height: 30px;
+    width: 30px;
+}
+a{
+    color: #222;
+}
+a:hover
+{
+    color: #333;
+}
+.txt
+{
+    color: #222;
+font-family: 'Alex-bold';
+font-size: 25px;
+}

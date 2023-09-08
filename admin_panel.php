@@ -1,0 +1,10 @@
+<?php 
+session_start();
+if($_SESSION["kullaniciadi"])
+{
+  header("location:./icerik/ad_p_syf.php?pnl_page_id=1");
+}
+else
+{
+    header("location:./icerik/bosekran.php");
+}

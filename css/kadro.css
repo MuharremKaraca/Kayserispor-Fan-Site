@@ -1,0 +1,62 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Ropa+Sans&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Rajdhani:wght@700&display=swap');
+
+body {
+   font-family: 'Montserrat', sans-serif;
+   background-color: #111;
+}
+
+@media screen and (max-width:1399px) {
+   #tablom thead {
+      font-size: 10px !important;
+      width: 50%;
+   }
+}
+
+@media screen and (max-width:600px) {
+
+   .kart1,
+   .kart2 {
+      font-size: 0px;
+      height: 0px;
+      visibility: hidden;
+      width: 0px;
+   }
+}
+
+@media screen and (max-width:533px) {
+
+   #tablom thead tr .kirmizikart,
+   .sarikart {
+      visibility: hidden;
+   }
+
+   #tablom thead tr .no {
+      height: 0px !important;
+      width: 0px !important;
+   }
+}
+
+@media screen and (max-width:1399px) {
+   #tablom thead tr #foto {
+      height: 0px !important;
+      width: 0px !important;
+   }
+}
+
+.table tbody tr .stretched-link:hover {
+   color: goldenrod;
+}
+
+#altmenu .dropdown {
+   font-family: 'Rajdhani', sans-serif;
+   font-size: 15px;
+}
+
+.content .container .nav .nav-item.dropdown .dropdown-item {
+   background-color: #111;
+   border: 0;
+   color: white;
+   font-size: 18px;
+}

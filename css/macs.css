@@ -1,0 +1,179 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Ropa+Sans&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Rajdhani:wght@700&display=swap');
+
+img{
+    display: block;
+}
+
+strong{
+    font-weight: 600;
+}
+.match{
+    margin-top: 30px;
+    background-color: #111;
+    display: flex;
+    flex-direction: column;
+    min-width: 600px;
+    border-radius: 10px;
+    box-shadow: 0 0 2px 0 rgba(#303030, 0.1), 0 4px 4px 0 rgba(#303030, 0.1);
+}
+#puan tbody tr:hover{
+    background-color: transparent !important;
+}
+.match-header{
+    display: flex;
+    padding: 16px;
+    border-bottom: 2px solid rgba(#303030,0.1);
+}
+.match-status{
+    background-color: red;
+    color: white;
+    padding: 8px 12px;
+    border-radius: 6px;
+    font-weight: 600;
+    font-size: 14px;
+    display: flex;
+    align-items: center;
+    line-height: 1;
+margin-right: auto;
+}
+.match-status::before{
+    content: "";
+    display: block;
+    width: 6px;
+    height: 6px;
+    background-color: currentcolor;
+    border-radius:50px;
+margin-right: 8px;
+}
+.match-tournament{
+    display: flex;
+    align-items: center;
+    font-weight: 600;
+
+}
+.match-tournament img {
+    width: 150px;
+    height:45px;
+    margin-right: 555px;
+}
+.btn-icon{
+    border:none;
+    background-color: transparent;
+    color: red;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.match-content{
+    display: flex;
+    position: relative;
+}
+.column{
+    padding: 32px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: calc(100%/3);
+}
+.team{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.team-logo{
+    width: 100px;
+    height: 100px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    background-color: white;
+    box-shadow: 0 4px 4px 0 rgba(#303030,0.15),
+    0 0 0 15px black;
+}
+.team-logo img{
+    width: 50px;
+}
+.team-name{
+    text-align: center;
+    margin-top: 24px;
+    font-size: 20px;
+    font-weight: 600;
+}
+.match-details{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.match-date, .match-hakem{
+    font-size: 14px;
+    color: white;
+}
+.match-hakem strong{
+color: red;
+}
+.match-score{
+    margin-top: 12px;
+    display: flex;
+    align-items: center;
+}
+.match-score-number{
+    font-size: 48px;
+    font-weight: 600;
+    line-height: 1;
+}
+.match-score-divider{
+    font-size: 28px;
+    font-weight: 700;
+    line-height: 1;
+    color: goldenrod;
+    margin-left: 10px;
+    margin-right: 10px;
+}
+.match-time-lapsed{
+    color: #DF9443;
+    font-size: 14px;
+    font-weight: 600;
+    margin-top: 8px;
+}
+.match-hakem{
+    margin-top: 12px;
+}
+.match-bet-options{
+    display: flex;
+    margin-top: 8px;
+    padding-bottom: 12px;
+}
+.match-bet-option{
+    margin-left: 4px;
+    margin-right: 4px;
+    border: 1 solid goldenrod;
+    background-color: white;
+    color: red;
+    font-size: 14px;
+    font-weight: 600;
+    border-radius: 2px;
+    padding: 4px 8px;
+}
+.match-bet-place{
+    position: absolute;
+    bottom: -16px;
+    left: 50%;
+    border: none;
+    background: red;
+    transform: translateX(-50%);
+    border-radius: 6px;
+    padding: 10px 48px;
+    color: goldenrod;
+    font-size: 16px;
+    box-shadow: 0 4px 8px 0 rgba(#303030,0.25);
+opacity: 70%;
+transition: 0.5s;
+}
+.match-bet-place:hover{
+    opacity: 100%;
+    transition: 0.5s;
+}

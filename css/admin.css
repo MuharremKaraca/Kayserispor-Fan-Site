@@ -1,0 +1,56 @@
+p{
+  font-size: 16px;
+  color:#222;
+  font-family: 'Montserrat-regular';
+}
+.ana {
+  border-radius: 30px;
+  background-color: #fff;
+  padding: 30px;
+  padding-left: 70px;
+  position: relative;
+  width: 1190px;
+  height: 100vh;
+  top: 31px;
+  margin-left: 120px;
+  margin-right: 100px;
+}
+#ara_in {
+  height: 40px;
+  padding: 10px;
+  color: #222;
+  font-family: 'Alex-bold';
+  font-size: 15px;
+  border-radius: 10px;
+  border: 1px solid #222;
+  max-width: 400px;
+  max-width: 260px;
+  width: 100%;
+}
+#ara_bt
+{
+width: 20%;
+font-size: 15px;
+color: #fff;
+background: #222;
+font-family: 'Alex-bold';
+border: 0;
+border-radius: 10px;
+height: 40px;
+}
+.dekor
+{
+  width: 100%;
+  height: auto;
+  padding: 15px;
+  border-radius: 15px;
+  background-color: #fff;
+  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px inset;
+}
+.dekor img {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+  position: center;
+  border-radius: 15px;
+}

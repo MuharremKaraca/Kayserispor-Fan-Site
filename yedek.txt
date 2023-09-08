@@ -1,0 +1,138 @@
+   .swiper {
+      z-index: -1;
+      width: 100%;
+      height: 90vh;
+    }
+
+    .swiper-slide {
+      font-size: 18px;
+      color: #fff;
+      -webkit-box-sizing: border-box;
+      box-sizing: border-box;
+      padding: 40px 60px;
+      background: radial-gradient(ellipse at top, transparent, rgba(0, 0, 0, .3) 40%, #000);
+    }
+
+    .parallax-bg {
+      position: absolute;
+      left: 0;
+      top: 0;
+      width: 130%;
+      height: 100%;
+      -webkit-background-size: cover;
+      background-size: cover;
+      background-position: center;
+    }
+
+    .swiper-slide .title {
+      font-size: 52px;
+      font-family: 'alex-semi-bold';
+    }
+
+    .swiper-slide .subtitle {
+      font-size: 30px;
+      font-family: 'open-sans-bold';
+    }
+
+
+    .swiper-slide .text {
+      font-size: 16px;
+      font-family: 'montserrat-regular';
+      max-width: 400px;
+      line-height: 1.5;
+    }
+
+    .slide_box {
+    width: 100%;
+    height: 90vh;
+    padding-top: 50vh;
+}
+    .swiper-button-next:after,
+    .swiper-button-prev:after {
+      font-size: 40px;
+      opacity: 90%;
+    }
+
+    .swiper-horizontal>.swiper-pagination-bullets,
+    .swiper-pagination-bullets.swiper-pagination-horizontal,
+    .swiper-pagination-custom,
+    .swiper-pagination-fraction {
+      bottom: 10%;
+      left: 0;
+      width: 100%;
+      text-align: start;
+    }
+
+    .swiper-pagination-bullet {
+      width: var(--swiper-pagination-bullet-width, var(--swiper-pagination-bullet-size, 10px));
+      height: var(--swiper-pagination-bullet-height, var(--swiper-pagination-bullet-size, 10px));
+      display: inline-block;
+      border-radius: 50%;
+      background: var(--swiper-pagination-bullet-inactive-color, #000);
+      opacity: var(--swiper-pagination-bullet-inactive-opacity, .2);
+    }
+
+    .swiper-pagination-bullet-active {
+
+      opacity: var(--swiper-pagination-bullet-opacity, 1);
+      background: var(--swiper-pagination-bullet-inactive-color, #8e0813);
+      width: var(--swiper-pagination-bullet-width, var(--swiper-pagination-bullet-size, 12px));
+      height: var(--swiper-pagination-bullet-height, var(--swiper-pagination-bullet-size, 12px));
+    }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <!------------------ SWİPER ------------------------>
+
+
+
+  
+      <div style="--swiper-navigation-color: #fff; --swiper-pagination-color: #fff" class="swiper mySwiper">
+        <div class="parallax-bg" style="
+          background-image: url('./images/saha.jpg');
+        " data-swiper-parallax="-23%"></div>
+        <div class="swiper-wrapper">
+          <?php 
+   $sorgu = $conn->query("SELECT * FROM ana_slider");
+
+   while ($cikti = $sorgu->fetch_array()){
+    $baslik = $cikti["baslik"];
+    $alt_baslik = $cikti["alt_baslik"];
+    $text = $cikti["text"];
+   ?>
+        
+          <div class="swiper-slide">
+            
+              <div class="slide_box">
+                <div class="title" data-swiper-parallax="-300"><?php echo $baslik?></div>
+                <div class="subtitle" data-swiper-parallax="-200"><?php echo $alt_baslik?></div>
+                <div class="text" data-swiper-parallax="-100">
+                  <p>
+                  <?php echo $text?>
+                  </p>
+                </div>
+                <button><a href="index.php">Haber Detayı     </a></button>
+              </div>
+       
+        </div>
+<? } ?>
+        </div>
+        <div class="swiper-pagination"></div>
+      </div>
+
+   

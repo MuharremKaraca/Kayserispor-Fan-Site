@@ -1,0 +1,31 @@
+ if ($haber_id % 2 != 0) { ?>
+            <div class="col-lg-4">
+              <div class="haber2">
+                <div class="haber_item2" style="background-image:url('../images/<?php echo $birinci[$i]['img']; ?>')">
+                  <div class="haber_anahtar2">
+                    <div class="kasa">
+                      <p class="zaman"><i class="fa-regular fa-newspaper"></i> <?php echo timeConvert($birinci[$i]['tarih']) ?></p>
+                      <div class="baslik_k"><a href="./icerik/detaypage.php?sf_id=<?php echo $birinci[$i]['sf_id']; ?>" class="stretched-link"></a>
+                        <p class="baslik"><?php echo $birinci[$i]['baslik']; ?></p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          <? } else ($haber_id % 2 == 0) { ?>
+            <div class="col-lg-4">
+              <div class="haber_container">
+                <div class="haber">
+                  <div class="haber_item" style="background-image:url('../images/<?php echo $ikinci[$i]['img']; ?>')">
+                    <div class="haber_efekt"></div>
+                  </div>
+                  <div class="p-4">
+                    <p class="zaman"><i class="fa-regular fa-newspaper"></i> <?php echo timeConvert($ikinci[$i]['tarih']) ?></p>
+                    <div class="baslik_k"><a href="./icerik/detaypage.php?sf_id=<?php echo $ikinci[$i]['sf_id']; ?>" class="stretched-link"></a>
+                      <p class="baslik"><?php echo $ikinci[$i]['baslik']; ?></p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>

@@ -1,0 +1,186 @@
+<?php
+//KAYIT KODLARININ BULNUDUĞU SATIR
+require_once "../baglan.php";
+$username_err = $usersurname_err = $tc_err = $userpassword_err = $userpasswordtkr_err = "";
+if (isset($_POST["TC"])) {
+
+    //USERNAME ONAY
+    if (empty($_POST["username"])) {
+        $username_err = "Boş geçemezsin Dostum.";
+    }
+    else {
+        $username = $_POST["username"];
+    }
+    //USERSURNAME ONAY
+    if (empty($_POST["usersurname"])) {
+        $usersurname_err = "Boş geçemezsin Dostum.";
+    } else {
+        $usersurname = $_POST["usersurname"];
+    }
+// TC ONAY
+    if (empty($_POST["TC"])) {
+        $tc_err = "Boş Geçilmez Evlat";
+    }
+     else if (strlen($_POST["TC"]) !== 11) {
+        $tc_err = "TC en az 11 karakter içermelidir.";
+     }
+        else {
+        $TC = $_POST["TC"];
+    }
+    //USERPASSWORD ONAY
+    if (empty($_POST["userpassword"])) {
+        $userpassword_err = "Boş geçemezsin Dostum.";
+    }
+   else if (strlen($_POST["userpassword"]) < 8) {
+        $userpassword_err = "Parola en az 8 karakter içermelidir.";
+    } else if (!preg_match('/^[a-z\d_]{5,20}[^\w]$/i', $_POST["userpassword"])) {
+        $userpassword_err = "Parola en az 1 büyük, küçük harf rakamdan ve özel karakterden oluşmalıdır.";
+    } else {
+        $userpassword = $_POST["userpassword"];
+    }
+    $userpassword_tkr = $_POST["userpassword_tkr"];
+    if (isset($username) && isset($usersurname) && isset($userpassword) && isset($userpassword_tkr) && isset($TC)) {
+
+        $userpassword = password_hash($_POST["userpassword"], PASSWORD_DEFAULT);
+        $userpassword_tkr = password_hash($_POST["userpassword_tkr"], PASSWORD_DEFAULT);
+        $ekle = "INSERT INTO userbase (username, usersurname, userpassword, userpassword_tkr,TC) VALUES ('$username','$usersurname','$userpassword','$userpassword_tkr','$TC')";
+        $calistirekle = mysqli_query($conn, $ekle);
+        if ($calistirekle) {
+            $secim = "SELECT * FROM userbase WHERE TC ='$TC'";
+            $calistir = mysqli_query($conn, $secim);
+            $ilgilikayit = mysqli_fetch_assoc($calistir);
+
+            session_start();
+            $_SESSION["username"] = $ilgilikayit["username"];
+            $_SESSION["usersurname"] = $ilgilikayit["usersurname"];
+            $_SESSION["TC"] = $ilgilikayit["TC"];
+            $_SESSION["userpassword"] = $ilgilikayit["userpassword"];
+            $_SESSION["userpassword_tkr"] = $ilgilikayit["userpassword_tkr"];
+            header("location:\icerik/profile.php");
+        } else {
+            $tc_k = '
+            <div class="alert alert-danger alert-dismissible fade show" role="alert">
+            <strong>Kayıt Başarısız</strong> Kullanmış olduğunuz TC başkası tarafından kullanımda.
+            <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Kapat"></button>
+          </div>
+           ';
+        }
+    } else {
+        echo "<script>Swal.fire({
+            title: 'Opps...!',
+            text: 'Dostum birşeyler eksik gibi',
+            width: 600,
+            padding: '35px',
+            color: '#222',
+            imageUrl: '../images/basarisizgiris.png',
+            imageWidth: 600,
+            background: `
+            #fff
+            `,
+            backdrop: `
+            rgb(255, 0, 0, 0.4)
+              url('https://tenor.com/view/nian-cat-gif-21854457')
+              left top
+              no-repeat
+            `
+          })</script>";
+    }
+}
+?>
+<?php
+//GİRİŞ KODLARININ BULUNDUĞU SATIR 
+require_once "../baglan.php";
+$tc_err = $userpassword1_err = "";
+if (isset($_POST["giris"])) {
+    //Kullanıcı TC Doğrulama
+    if (empty($_POST["TC"])) {
+      $tc_err = "TC boş geçilemez.";
+    } else {
+      $TC = $_POST["TC"];
+    }
+    //Şifre Doğrulama
+    if (empty($_POST["userpassword"])) {
+      $userpassword1_err = "Şifre boş geçilemez.";
+    } else {
+      $userpassword1 = $_POST["userpassword"];
+    }
+    
+    if (isset($TC) && isset($userpassword1)) {
+      $secim = "SELECT * FROM userbase WHERE TC ='$TC'";
+      $calistir = mysqli_query($conn, $secim);
+      $kayitsayisi = mysqli_num_rows($calistir); // ya sıfır ya birdir 1-0
+  
+      if ($kayitsayisi > 0) {
+        $ilgilikayit = mysqli_fetch_assoc($calistir);
+        $hashlisifre = $ilgilikayit["userpassword"];
+  
+        if (password_verify($userpassword1, $hashlisifre)) {
+          session_start();
+              $_SESSION["TC"] = $ilgilikayit["TC"];
+              $_SESSION["username"] = $ilgilikayit["username"];
+              $_SESSION["usersurname"] = $ilgilikayit["usersurname"];
+              $_SESSION["tarih"] = $ilgilikayit["tarih"];
+          header("location:\icerik/profile.php");
+        } else {
+            echo "<script>Swal.fire({
+                icon: 'error',
+                title: 'Opps...!',
+                text: 'Dostum birşeyler eksik gibi.',
+                width: 600,
+                padding: '35px',
+                color: '#fff',
+                background: `
+                #222
+                `,
+                backdrop: `
+                rgb(255, 0, 0, 0.4)
+                  url('https://tenor.com/view/nian-cat-gif-21854457')
+                  left top
+                  no-repeat
+                `
+              })</script>";
+        }
+      } 
+      else {
+        echo "<script>Swal.fire({
+            icon: 'error',
+            title: 'Opps...!',
+            text: 'Dostum böyle bir kullanıcı bulunmamakta.',
+            width: 600,
+            padding: '35px',
+            color: '#fff',
+            background: `
+            #222
+            `,
+            backdrop: `
+            rgb(255, 0, 0, 0.4)
+              url('https://tenor.com/view/nian-cat-gif-21854457')
+              left top
+              no-repeat
+            `
+          })</script>";
+      }
+  
+    }
+    else
+    {
+        echo "<script>Swal.fire({
+            icon: 'error',
+            title: 'Opps...!',
+            text: 'Dostum birşeyler eksik gibi.',
+            width: 600,
+            padding: '35px',
+            color: '#fff',
+            background: `
+            #222
+            `,
+            backdrop: `
+            rgb(255, 0, 0, 0.4)
+              url('https://tenor.com/view/nian-cat-gif-21854457')
+              left top
+              no-repeat
+            `
+          })</script>";
+      }
+    }
+?>

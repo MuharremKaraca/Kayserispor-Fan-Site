@@ -1,0 +1,346 @@
+
+
+.p-kutu
+{
+    height: 50px;
+    background: red;
+    padding: 12px;
+    border-top-right-radius: 150px;
+    border-bottom-right-radius: 1px;
+    margin-top: 5%;
+    font-family: 'Poppins-Regular';
+    font-size: 16px;
+    width: 100%;
+transition: 0.8s;
+}
+.p-kutu:hover
+{
+    border-top-right-radius: 1px;
+    border-bottom-right-radius: 150px;
+    background: linear-gradient(rgba(255, 255, 2555, .4));
+}
+.linkler {
+    position: relative;
+    width: 80%;
+    margin-left: auto;
+    margin-right: auto;
+    height: 60px;
+    background-color: transparent;
+    border-radius: 5px;
+    margin-top: 5px;
+    display: flex;
+    gap: 10px;
+    justify-content: start;
+    padding-left: 5px;
+    align-items: center;
+    text-align: start;
+    color: #222;
+    text-decoration: none;
+    letter-spacing: 2px;
+    font-size: 15px;
+    text-transform: uppercase;
+    font-family: 'open-sans-Regular';
+}
+.linkler::before
+{
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+
+    background-color: #9b0101;
+
+    border-radius: 5px;
+    transform: scaleX(0);
+    transition: 0.s ease-in-out;
+    transform-origin: right;
+}
+.linkler:hover::before
+{
+    transform: scaleX(1);
+    transform-origin: left;
+}
+.linkler span
+{
+    opacity: 1;
+    transform: none;
+    top: 0;
+    display: inline-block;
+    z-index: 2;
+    transition: 0.5s ease-in-out;
+}
+.linkler:hover span
+{
+    color: #fff;
+}
+.linkler i
+{
+    position: relative;
+    display: inline-block;
+    width: 2px;
+    height: 30px;
+    background-color: bluw;
+    transition: 0.2s,width 0.4s, height 0.2s;
+    transition-delay: 0s, 0.2s, 0.2s;
+}
+.linkler:hover i
+{
+    width: 30px;
+    height: 2px;
+    background-color: #fff;
+    transition-delay: 0s,1s, 0.5s;
+}
+.linkler i::before
+{
+    content: '';
+position: absolute;
+top: 0.5px;
+right: 0;
+width: 50%;
+height: 2px;
+background-color: transparent;
+rotate: 0;
+transform-origin: right;
+transition: 1s;
+}
+.linkler:hover i::before
+{
+    background-color: #fff;
+    rotate: 45deg;
+    transition-delay: 1.5s;
+}
+
+
+.linkler i::after
+{
+    content: '';
+position: absolute;
+top: -0.5px;
+right: 0;
+width: 50%;
+height: 2px;
+background-color: transparent;
+rotate: 0;
+transform-origin: right;
+transition: 1s;
+}
+.linkler:hover i::after
+{
+    background-color: #fff;
+    rotate: -45deg;
+    transition-delay: 1.5s;
+}
+#info_main
+{
+    background-color:transparent;
+    border-radius: 5px;
+    padding: 30px;
+  color: #222;
+  width: 100%;
+  margin-top: 5px;
+}
+.info_baslik
+{
+    color: #222;
+    font-size: 30px;
+    font-family: 'poppins-medium';
+    opacity: 80%;
+    width: 100%;
+}
+.text {
+    color: #222;
+    font-size: 16px;
+    opacity: 90%;
+    font-family: 'Poppins-regular';
+}
+.big_img
+{
+    margin-top: 10px;
+    margin-bottom: 20px;
+}
+.alt_baslik
+{
+    font-size: 20px;
+    font-family: 'Montserrat-medium';
+    color: #222;
+    opacity: 60%;
+}
+.kalin_text {
+    color: #222;
+    font-size: 16px;
+    opacity: 80%;
+    width: 100%;
+    font-family: 'Montserrat-bold';
+}
+.konu
+{
+    display: flex;
+}
+.konu img
+{
+    margin-right: 10px;
+}
+.konu p {
+    font-family: 'Montserrat-regular';
+    margin-top: 4px;
+    font-size: 16px;
+}
+
+.button a {
+    width: 100%;
+    font-size: 16px;
+    color: #222;
+    padding: 16px;
+    cursor: pointer;
+    height: 55px;
+    text-align:center;
+    text-transform: uppercase;
+    border: none;
+    padding-left: 30px;
+    padding-right: 30px;
+    background-size: 300% 100%;
+    font-family: 'Poppins-medium';
+    border-radius: 15px;
+    -o-transition: all .4s ease-in-out;
+    -webkit-transition: all .4s ease-in-out;
+    transition: all .4s ease-in-out;
+}
+.button a {
+    background-image: linear-gradient(to right, #25aae1, #4481eb, #04befe, #3f86ed);
+    box-shadow: 0 4px 5px 0 rgba(65, 132, 234, 0.75);
+}
+.button a:hover {
+    background-position: 100% 0;
+    -o-transition: all .4s ease-in-out;
+    -webkit-transition: all .4s ease-in-out;
+    transition: all .4s ease-in-out;
+    color: #222;
+}
+.button a:focus {
+    outline: none;
+}
+
+/*2.button*/
+ 
+.button2 a {
+    width: 100%;
+    font-size: 16px;
+    color: #222;
+    padding: 16px;
+    cursor: pointer;
+    height: 55px;
+    text-transform: uppercase;
+    text-align:center;
+    border: none;
+    padding-left: 30px;
+    padding-right: 30px;
+    background-size: 300% 100%;
+font-family: 'Poppins-medium';
+    border-radius: 15px;
+    -o-transition: all .4s ease-in-out;
+    -webkit-transition: all .4s ease-in-out;
+    transition: all .4s ease-in-out;
+}
+.button2 a {
+    background-image: linear-gradient(to right, #e12525, #eb4444, #fe0404, #ed3f3f);
+    box-shadow: 0 4px 5px 0 rgba(234, 65, 65, 0.75);
+}
+.button2 a:hover {
+    background-position: 100% 0;
+    -o-transition: all .4s ease-in-out;
+    -webkit-transition: all .4s ease-in-out;
+    transition: all .4s ease-in-out;
+    color: #222;
+}
+.button2 a:focus {
+    outline: none;
+}
+/*3.button*/
+.button3 a {
+    width: 100%;
+    font-size: 16px;
+    color: #222;
+    padding: 16px;
+    cursor: pointer;
+    text-transform: uppercase;
+    height: 55px;
+    text-align: center;
+    padding-left: 50px;
+    padding-right: 50px;
+    border: none;
+    background-size: 300% 100%;
+    font-family: 'Poppins-medium';
+    border-radius: 10px;
+    -o-transition: all .4s ease-in-out;
+    -webkit-transition: all .4s ease-in-out;
+    transition: all .4s ease-in-out;
+}
+.button3 a {
+    background-image: linear-gradient(to right, #e12525, #fd2b2b, #fe0404, #c12f2f);
+    box-shadow: 0 4px 5px 0 rgb(183 28 28 / 75%);
+}
+
+.button3 a:hover {
+    background-position: 100% 0;
+    -o-transition: all .4s ease-in-out;
+    -webkit-transition: all .4s ease-in-out;
+    transition: all .4s ease-in-out;
+    color: #222;
+}
+.button3 a:focus {
+    outline: none;
+}
+.kat_say {
+    color: #04befe;
+    font-family: 'Poppins-medium';
+    font-size: 18px;
+}
+.kat_text
+{
+    color: #222;
+    font-family: 'Poppins-Regular';
+    font-size: 16px;
+}
+.kat_baslik
+{
+    color: #04befe;
+    font-family: 'Poppins-medium';
+    font-size: 16px;
+}
+.ilk_h1
+{
+    font-size: 22px;
+}
+.accordion-button
+{
+    background: #222;
+    outline: none;
+    box-shadow: none;
+    color: #fff;
+}
+.accordion-button:focus{box-shadow: none;}
+.accordion-button:not(.collapsed)
+{
+    background: #222;
+    color: #fff;
+}
+.accordion-body
+{
+    background:#222;
+    color: #fff;
+}
+.accordion-button::after
+{
+    display: none;
+}
+.accordion-item
+{
+    border: 0;
+}
+.iconcak
+{
+    width: 20px;
+    margin-right: 5px;
+}

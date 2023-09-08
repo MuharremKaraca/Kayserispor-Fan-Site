@@ -1,0 +1,141 @@
+
+.loyout.wrap {
+  flex-wrap: wrap;
+  display: flex;
+  -webkit-box-flex: 1;
+  -ms-flex: 1 1 auto;
+  flex: 1 1 auto;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
+  min-width: 0;
+}
+
+/*
+SAT'IN CSS KODLARININ BULUNDUĞU ALAN
+*/
+.sat>* {
+  flex-shrink: 0;
+  width: 100%;
+  max-width: 100%;
+  padding-right: calc(var(--bs-gutter-x) * .5);
+  padding-left: calc(var(--bs-gutter-x) * .5);
+  margin-top: var(--bs-gutter-y);
+}
+.sat {
+  display: flex;
+  flex-wrap: wrap;
+}
+/*
+SAT'IN CSS KODLARININ BULUNDUĞU ALAN
+*/
+/*
+COLONLARIN CSS KODLARININ BULUNDUĞU ALAN
+*/
+.colon-3 {
+  flex: 0 0 auto;
+  width: 25%;
+}
+
+.colon-4 {
+  flex: 0 0 auto;
+  width: 33.33333333%;
+}
+
+.colon-5 {
+  flex: 0 0 auto;
+  width: 41.66666667%;
+}
+
+.colon-6 {
+  flex: 0 0 auto;
+  width: 50%
+}
+
+.colon-7 {
+  flex: 0 0 auto;
+  width: 58.33333333%;
+}
+
+.colon-8 {
+  flex: 0 0 auto;
+  width: 66.66666667%;
+}
+
+.colon-9 {
+  flex: 0 0 auto;
+  width: 75%;
+}
+
+.colon-10 {
+  flex: 0 0 auto;
+  width: 83.33333333%;
+}
+
+.colon-11 {
+  flex: 0 0 auto;
+  width: 91.66666667%;
+}
+
+.colon-12 {
+  flex: 0 0 auto;
+  width: 100%;
+}
+/*
+COLONLARIN CSS KODLARININ BULUNDUĞU ALANIN BİTİŞİ
+*/
+.forming-box
+{
+  
+  position: relative;
+  margin-bottom: 15px;
+  position: relative;
+  border-bottom: 1px solid #e0e0e0;
+}
+.forming-input {
+  width: 100%;
+  padding: 18px 0px 5px 5px;
+  border: none;
+  outline: none;
+  border: 1px solid #fff;
+border-radius: 5px;
+}
+.forming-input:hover{
+  border: 1px solid #222;
+  border-radius: 5px;
+}
+.forming-input::placeholder
+{
+  opacity: 0;
+}
+.forming-ct
+{
+  position: absolute;
+  top: 0;
+  left: 5px;
+  transform: translateY(15px);
+  font-size: 18px;
+  transition-duration: 300ms;
+  opacity: 1;
+  cursor: text;
+  color: #222;
+}
+.forming-input:focus .forming-ct
+{
+  color: crimson;
+}
+/*
+BU KOD İÇERİĞİ TIKLAYINCA İNPUT'U FLOATİNG İNPUT HALİNE GETİRİYO
+*/
+.forming-box:focus-within > .forming-ct,
+.forming-input:not(:placeholder-shown) + .forming-ct{
+  transform:translateY(0px);
+  opacity: 0.9;
+  font-size: 12px;
+}
+/*
+BU KOD İÇERİĞİ TIKLADIĞINDA VALUE DOLUYSA YA DA DOLUCAKSA LABELİN RENGİNİ DĞEİŞTİRİYO
+*/
+.forming-input:focus~.forming-ct,
+.forming-input:not([value=""]):valid~.forming-ct {
+  color: red;
+}

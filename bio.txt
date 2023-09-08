@@ -1,0 +1,40 @@
+  <!------------------ BİO ------------------------>
+  <div class="container mt-5">
+    <div class="bio">
+      <div class="row">
+        <div class="col-lg-4">
+          <div class="bio_img">
+            <img src="./images/cagdas_atan.jpg" alt="">
+          </div>
+        </div>
+        <div class="col-lg-8">
+          <div class="text_main">
+            <p class="bio_baslik">ÇAĞDAŞ ATAN</p>
+            <p class="bio_text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ex delectus ut at alias voluptas et modi cum impedit omnis officia earum natus enim officiis sint temporibus, expedita quos ad sed optio, porro veniam consectetur corporis nemo labore? Ad eum unde odio quisquam odit, molestiae nobis quidem quaerat voluptate perferendis quam neque placeat, nam sequi, voluptates fuga. Asperiores repellat culpa deleniti.</p>
+            <div class="item_menu">
+              <div class="link">
+                <p class="link">Skills</p>
+                <div class="tik"></div>
+              </div>
+              <div class="link">
+                <p class="link">Exprience</p>
+              </div>
+              <div class="link">
+                <p class="link">Education</p>
+              </div>
+            </div>
+            <div class="item">
+              <p class="item_b">FT</p>
+              <p class="item_t">Lorem ipsum dolor sit amet.</p>
+              <p class="item_b">FT</p>
+              <p class="item_t">Lorem ipsum dolor sit amet.</p>
+              <p class="item_b">FT</p>
+              <p class="item_t">Lorem ipsum dolor sit amet.</p>
+              <p class="item_b">FT</p>
+              <p class="item_t">Lorem ipsum dolor sit amet.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>

@@ -1,0 +1,417 @@
+
+.formBx {
+    margin-top: 125px;
+}
+
+.p-input {
+    color: #fff;
+    height: 50px;
+    font-family: 'Poppins-Regular';
+    outline: none;
+    background: #222;
+    border: 0;
+    padding: 20px;
+    border-radius: 5px;
+}
+
+.inputBox {
+    position: relative;
+    width: 100%;
+    margin-top: 10%;
+}
+.form-floating>.form-control, .form-floating>.form-control-plaintext {
+    padding: 1rem 1.3rem;
+}
+
+.inputBox input {
+    width: 100%;
+    padding: 15px 20px;
+    background-color: #222;
+    color: white;
+    box-shadow: none;
+    font-size: 15px;
+    font-family: 'Poppins-Regular';
+    border-radius: 10px;
+    border: 1px solid #222;
+    outline: none;
+    margin: 8px 0;
+    letter-spacing: 1px;
+    transition: 0.5s;
+}
+.p-baslik
+{
+    color: #fff;
+    font-family: 'Poppins-Medium';
+    font-size: 35px;
+    margin-bottom: 5%;
+    text-align: start;
+    border-bottom: 4px solid transparent;
+    transition: 0.5s;
+}
+.p-baslik:hover
+{
+    color: #fff;
+    font-family: 'Poppins-Medium';
+    font-size: 35px;
+    margin-bottom: 5%;
+    text-align: start;
+    border-bottom: 4px solid rgba(184, 1, 1, 0.63);
+transition: 0.5s;
+}
+
+.inputBox input:focus {
+    width: 100%;
+    padding: 15px 20px;
+    background-color: #222;
+    color: white;
+    box-shadow: none;
+    font-size: 15px;
+    font-family: 'Poppins-Regular';
+    border-radius: 10px;
+    border: 1px solid red;
+    outline: none;
+    margin: 8px 0;
+    letter-spacing: 1px;
+    transition: 0.5s;
+}
+
+.inputBox input:focus~input {
+    border: 1px solid rgb(184, 1, 1);
+}
+
+.form-floating label {
+    font-size: 16px;
+    font-family: 'Poppins-Regular';
+    color: #fff;
+    transition: 0.5s;
+}
+
+.form-floating>.form-control-plaintext:focus,
+.form-floating>.form-control-plaintext:not(:placeholder-shown),
+.form-floating>.form-control:focus,
+.form-floating>.form-control:not(:placeholder-shown) {
+    padding-top: 1.625rem !important;
+    padding-bottom: 0.625rem !important;
+}
+
+.form-floating>.form-control-plaintext~label,
+.form-floating>.form-control:focus~label,
+.form-floating>.form-control:not(:placeholder-shown)~label,
+.form-floating>.form-select~label {
+    opacity: 100%;
+    border-right: 1px solid red;
+    border-left: 1px solid red;
+    height: 50%;
+    transition: 0.5s;
+    padding-bottom: 0;
+    color: red;
+    margin-top: 2px;
+    padding-top: 0;
+    margin-bottom: 14px;
+    background: #222;
+    transform: scale(.85) translateY(-1rem) translateX(1.5rem);
+}
+
+.form-floating>label {
+    padding: 1rem 1rem;
+}
+
+.user_nick {
+    margin-bottom: 5%;
+}
+
+form {
+    width: 80%;
+}
+
+@media (max-width:1399.98px) {
+    .p-m {
+        width: 100%;
+    }
+
+    .profil_photo {
+        width: 100%;
+        background-color: transparent;
+    }
+
+    .profil_img {
+        width: 100%;
+        border-radius: 50px;
+        box-shadow: rgb(0 0 0) 0px 5px 15px;
+        object-fit: cover;
+    }
+
+    .user_nick {
+        font-size: 20px;
+        margin-top: 20px;
+        text-align: center;
+        margin-bottom: 20px;
+        color: #fff;
+        font-family: 'Poppins-Medium';
+        background-color: transparent;
+        border: 0;
+    }
+
+    .l_main {
+        text-align: center;
+        width: 55%;
+        margin-top: 22px;
+        margin-left: auto;
+    }
+
+    .l_main a {
+        font-family: 'Poppins-Regular';
+        font-size: 14px;
+        opacity: 80%;
+        transition: 0.5s;
+    }
+
+    .l_main a:hover {
+        font-family: 'Poppins-Regular';
+        font-size: 14px;
+        opacity: 100%;
+    }
+}
+
+@media (max-width:1199.98px) {
+
+    .p-m {
+        width: 100%;
+    }
+
+    .profil_photo {
+        width: 100%;
+        background-color: transparent;
+    }
+
+    .profil_img {
+        width: 100%;
+        border-radius: 50px;
+        box-shadow: rgb(0 0 0) 0px 5px 15px;
+        object-fit: cover;
+    }
+
+    .user_nick {
+        font-size: 20px;
+        margin-top: 20px;
+        text-align: center;
+        margin-bottom: 20px;
+        color: #fff;
+        font-family: 'Poppins-Medium';
+        background-color: transparent;
+        border: 0;
+    }
+
+    .l_main {
+        text-align: center;
+        width: 60%;
+        margin-top: 18px;
+        margin-left: auto;
+    }
+
+    .l_main a {
+        font-family: 'Poppins-Regular';
+        font-size: 14px;
+        opacity: 80%;
+        transition: 0.5s;
+    }
+
+    .l_main a:hover {
+        font-family: 'Poppins-Regular';
+        font-size: 14px;
+        opacity: 100%;
+    }
+}
+
+@media (max-width:991.98px) {
+    .p-m {
+        width: 100%;
+    }
+
+    .profil_photo {
+        width: 100%;
+        background-color: transparent;
+    }
+
+    .profil_img {
+        width: 80%;
+        border-radius: 50px;
+        box-shadow: rgb(0 0 0) 0px 5px 15px;
+        object-fit: cover;
+    }
+
+    .user_nick {
+        font-size: 20px;
+        margin-top: 20px;
+        text-align: center;
+        margin-bottom: 20px;
+        color: #fff;
+        font-family: 'Poppins-Medium';
+        background-color: transparent;
+        border: 0;
+    }
+
+    .l_main {
+        text-align: center;
+        width: 255px;
+        margin-left: auto;
+        margin-top: -40px;
+    }
+
+    .l_main a {
+        font-family: 'Poppins-Regular';
+        font-size: 14px;
+        opacity: 80%;
+        transition: 0.5s;
+    }
+
+    .l_main a:hover {
+        font-family: 'Poppins-Regular';
+        font-size: 14px;
+        opacity: 100%;
+    }
+}
+
+@media (max-width:767.98px) {
+    .p-m {
+        width: 100%;
+    }
+
+    .profil_photo {
+        width: 100%;
+        background-color: transparent;
+        padding-left: 50px;
+    }
+
+    .profil_img {
+        width: 80%;
+        border-radius: 50px;
+        box-shadow: rgb(0 0 0) 0px 5px 15px;
+        object-fit: cover;
+    }
+
+    .user_nick {
+        font-size: 20px;
+        margin-top: 20px;
+        text-align: center;
+        margin-bottom: 20px;
+        color: #fff;
+        font-family: 'Poppins-Medium';
+        background-color: transparent;
+        border: 0;
+    }
+
+    .l_main {
+        text-align: center;
+        width: 100%;
+        margin-top: auto;
+    }
+
+    .l_main a {
+        font-family: 'Poppins-Regular';
+        font-size: 15px;
+        opacity: 80%;
+        transition: 0.5s;
+    }
+
+    .l_main a:hover {
+        font-family: 'Poppins-Regular';
+        font-size: 15px;
+        opacity: 100%;
+    }
+}
+
+@media (max-width:575.98px) {
+    .p-m {
+        width: 100%;
+    }
+
+    .profil_photo {
+        width: 100%;
+        background-color: transparent;
+        padding-left: 0;
+    }
+
+    .profil_img {
+        width: 100%;
+        border-radius: 50px;
+        box-shadow: rgb(0 0 0) 0px 5px 15px;
+        object-fit: cover;
+    }
+
+    .user_nick {
+        font-size: 20px;
+        margin-top: 20px;
+        text-align: center;
+        margin-bottom: 20px;
+        color: #fff;
+        font-family: 'Poppins-Medium';
+        background-color: transparent;
+        border: 0;
+    }
+
+    .l_main {
+        text-align: center;
+        width: 100%;
+        margin-top: auto;
+    }
+
+    .l_main a {
+        font-family: 'Poppins-Regular';
+        font-size: 15px;
+        opacity: 80%;
+        transition: 0.5s;
+    }
+
+    .l_main a:hover {
+        font-family: 'Poppins-Regular';
+        font-size: 15px;
+        opacity: 100%;
+    }
+}
+
+@media (min-width:1400px) {
+    .p-m {
+        width: 24%;
+    }
+
+    .profil_photo {
+        width: 90%;
+        background-color: transparent;
+    }
+
+    .profil_img {
+        width: 100%;
+        border-radius: 50px;
+        box-shadow: rgb(0 0 0) 0px 5px 15px;
+        object-fit: cover;
+    }
+
+    .user_nick {
+        font-size: 20px;
+        color: #fff;
+        font-family: 'Poppins-Medium';
+        background-color: transparent;
+        border: 0;
+    }
+
+    .l_main {
+        text-align: center;
+        margin-left: auto;
+        width: 50%;
+        margin-top: 0;
+    }
+
+    .l_main a {
+        font-family: 'Poppins-Regular';
+        font-size: 15px;
+        opacity: 80%;
+        transition: 0.5s;
+    }
+
+    .l_main a:hover {
+        font-family: 'Poppins-Regular';
+        font-size: 15px;
+        opacity: 100%;
+    }
+}

@@ -1,0 +1,147 @@
+.satirim {
+    display: flex;
+    flex-wrap: wrap-reverse;
+    gap: 15px;
+}
+
+.colonum {
+    flex: 0 0 auto;
+    width: 100%;
+}
+
+.sayi_text {
+    color: #222;
+    font-family: 'Poppins-Medium';
+    font-size: 20px;
+    margin: 14px 0;
+}
+
+#ara-b {
+    width: 100%;
+    max-width: 100%;
+    height: 100%;
+}
+
+#ara_m {
+    background: #fff;
+    border-radius: 15px;
+    border: 1px solid #a59d9da9;
+    text-align: start;
+    color: #222;
+    width: 91%;
+}
+
+#ara_m .search-input .icon {
+    list-style: 55px;
+    position: absolute;
+    left: auto;
+    font-size: 20px;
+    height: 100%;
+    right: 7%;
+    align-items: center;
+    color: #222;
+    cursor: pointer;
+    display: flex;
+}
+
+#ara_m .search-input input {
+    height: 100%;
+    width: 95%;
+    outline: none;
+    border: none;
+    border-radius: 30px;
+    padding: 0 60px 0 20px;
+    font-size: 18px;
+    box-shadow: none;
+    background-color: transparent;
+    color: #222;
+}
+
+#ara_m .search-input {
+    height: 100%;
+}
+
+#ara_m form {
+    height: 100%;
+}
+
+.ara-icerik {
+    width: 100%;
+    height:300px;
+    border: 1px solid #a59d9da9;
+    display: flex;
+    border-radius: 15px;
+    background: #fff;
+}
+
+.ara-icerik .ara-img {
+    width: 35%;
+    height: 100%;
+    border-bottom-left-radius: 15px;
+    border-top-left-radius: 15px;
+    overflow: hidden;
+}
+
+.ara-icerik .ara-img img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-bottom-left-radius: 15px;
+    border-top-left-radius: 15px;
+    transition: transform 10s;
+}
+.ara-icerik .ara-img img:hover {
+    transform: scale(1.2);
+    transition: transform 15s;
+}
+.ara-icerik .ara-text {
+    color: #222;
+    font-size: 20px;
+    padding: 15px 20px;
+    font-family: 'Poppins-regular';
+    width: 65%;
+    height: 100%;
+    text-align: start;
+}
+
+div,p,span {
+    padding: 0;
+    margin: 0;
+}
+
+span {
+    opacity: 1;
+    display: contents;
+    text-transform: none;
+}
+.ara-text .title-d{
+    overflow: hidden;
+    text-overflow: ellipsis;
+    height: 80px;
+    white-space: nowrap;
+}
+.ara-text .title {
+    width: 100%;
+    height: 80px;
+    font-family: 'Montserrat-medium';
+    white-space: nowrap;
+}
+
+.ara-text .text-d{
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    height: 160px;
+}
+.ara-text .text {
+    width: 100%;
+    font-size: 18px;
+    font-family: 'Montserrat-regular';
+white-space: nowrap;
+}
+.ara-text .tarih {
+    width: 100%;
+    font-size: 15px;
+    opacity: 90%;
+    font-family: 'Montserrat-regular';
+}
